@@ -41,7 +41,7 @@ MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 # xDebug:
 #####################################
 
-ARG INSTALL_XDEBUG=false
+ARG INSTALL_XDEBUG=true
 RUN if [ ${INSTALL_XDEBUG} = true ]; then \
     # Install the xdebug extension
     pecl install xdebug && \
@@ -55,7 +55,7 @@ COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 # MongoDB:
 #####################################
 
-ARG INSTALL_MONGO=false
+ARG INSTALL_MONGO=true
 RUN if [ ${INSTALL_MONGO} = true ]; then \
     # Install the mongodb extension
     pecl install mongodb && \
