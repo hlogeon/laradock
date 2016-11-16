@@ -129,6 +129,10 @@ RUN if [ ${INSTALL_OPCACHE} = true ]; then \
 # Copy opcache configration
 COPY ./opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
+#### SOCKET CONNECTION ####
+RUN docker-php-ext-install sockets
+
+
 
 #
 #--------------------------------------------------------------------------
